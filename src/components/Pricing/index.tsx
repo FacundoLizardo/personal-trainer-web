@@ -22,7 +22,7 @@ const Pricing = () => {
             className="rounded-md bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
             onClick={() => {
               const pricing = document.getElementById("contact");
-              pricing.scrollIntoView({ behavior: "sMesoth", block: "end", inline: "nearest" });
+              pricing.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
             }}
           >
             Consultas
