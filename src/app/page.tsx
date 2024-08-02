@@ -20,7 +20,7 @@ export default function Home() {
       <Video />
       <NutritionalGuide />
       <TrainingPlan />
-      <Testimonials />
+      {/*<Testimonials />*/}
       <Pricing />
       <Blog />
       <Contact />

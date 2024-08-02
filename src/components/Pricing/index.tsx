@@ -12,7 +12,7 @@ const Pricing = () => {
       <div className="container">
         <SectionTitle
           title="Simple y accesible"
-          paragraph="Distintos paquetes o Mesdalidades para que solo compres lo que necesitas. ¡No dudes en consultar!"
+          paragraph="Distintos paquetes o modalidades para que solo compres lo que necesitas con pagos unicos. ¡No dudes en consultar!"
           center
           width="665px"
           mb={'0px'}
@@ -69,44 +69,65 @@ const Pricing = () => {
         </div>
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
+
+          <PricingBox
+            packageName="Principiante"
+            price={isMonthly ? "4.900" : "49.000"}
+            discountPrice={!isMonthly && "58.800"}
+            duration={isMonthly ? "Mes" : "Año"}
+            subtitle="Pago unico por servicio mensual o anual. Consultar otros medios de pago."
+          >
+            <OfferList text="Rutina 3/4 veces por semana" status="active" />
+            <OfferList text="Guia de calentamiento" status="active" />
+            <OfferList text="Guia de ejercicios" status="active" />
+            <OfferList text="Consultas primera semana" status="active" />
+            <OfferList text="Guia nutricional" status="inactive" />
+            <OfferList text="Asesoramiento personal" status="inactive" />
+          </PricingBox>
+
           <PricingBox
             packageName="Basico"
-            price={isMonthly ? "40" : "120"}
+            price={isMonthly ? "8.900" : "89.900"}
+            discountPrice={!isMonthly && "106.800"}
             duration={isMonthly ? "Mes" : "Año"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            subtitle="Pago unico por servicio mensual o anual. Consultar otros medios de pago."
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="inactive" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
+            <OfferList text="Rutina 5 veces por semana" status="active" />
+            <OfferList text="Guia de calentamiento" status="active" />
+            <OfferList text="Guia de ejercicios" status="active" />
+            <OfferList text="Consultas primera semana" status="active" />
+            <OfferList text="Guia nutricional" status="inactive" />
+            <OfferList text="Asesoramiento personal" status="inactive" />
           </PricingBox>
+
           <PricingBox
-            packageName="Basic"
-            price={isMonthly ? "399" : "789"}
+            packageName="Intermedio"
+            price={isMonthly ? "14.900" : "149.000"}
+            discountPrice={!isMonthly && "178.800"}
             duration={isMonthly ? "Mes" : "Año"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            subtitle="Pago unico por servicio mensual o anual. Consultar otros medios de pago."
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
+            <OfferList text="Rutina 4/5 veces por semana" status="active" />
+            <OfferList text="Guia de calentamiento" status="active" />
+            <OfferList text="Guia de ejercicios" status="active" />
+            <OfferList text="Consultas primeras 2 semanas" status="active" />
+            <OfferList text="Asesoramiento personal" status="active" />
+            <OfferList text="Guia nutricional" status="inactive" />
           </PricingBox>
+
           <PricingBox
-            packageName="Plus"
-            price={isMonthly ? "589" : "999"}
+            packageName="Completo"
+            price={isMonthly ? "24.900" : "249.000"}
+            discountPrice={!isMonthly && "298.800"}
             duration={isMonthly ? "Mes" : "Año"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            subtitle="Pago unico por servicio mensual o anual. Consultar otros medios de pago."
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Free Lifetime Updates" status="active" />
+            <OfferList text="Rutina totalmente personalizada" status="active" />
+            <OfferList text="Guia de calentamiento" status="active" />
+            <OfferList text="Guia de ejercicios" status="active" />
+            <OfferList text="Consultas ilimitadas" status="active" />
+            <OfferList text="Asesoramiento personal" status="active" />
+            <OfferList text="Guia nutricional a la medida" status="active" />
           </PricingBox>
         </div>
       </div>
