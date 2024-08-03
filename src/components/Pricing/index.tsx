@@ -3,6 +3,7 @@ import { useState } from "react";
 import SectionTitle from "../Common/SectionTitle";
 import OfferList from "./OfferList";
 import PricingBox from "./PricingBox";
+import PricingBoxBasic from "@/components/Pricing/PricingBoxBasic";
 
 const Pricing = () => {
   const [isMonthly, setIsMonthly] = useState(true);
@@ -11,13 +12,13 @@ const Pricing = () => {
     <section id="pricing" className="relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="Simple y accesible"
+          title="Planificaciones y precios"
           paragraph="Distintos paquetes o modalidades para que solo compres lo que necesitas con pagos unicos. ¡No dudes en consultar!"
           center
           width="665px"
-          mb={'0px'}
+          mb={"0px"}
         />
-        <div className={'flex flex-col w-full items-center justify-center mb-[100px] mt-5'}>
+        <div className={"flex flex-col w-full items-center justify-center mb-[100px] mt-5"}>
           <button
             className="rounded-md bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
             onClick={() => {
@@ -68,7 +69,7 @@ const Pricing = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3 mb-20">
 
           <PricingBox
             packageName="Principiante"
@@ -77,12 +78,12 @@ const Pricing = () => {
             duration={isMonthly ? "Mes" : "Año"}
             subtitle="Pago unico por servicio mensual o anual. Consultar otros medios de pago."
           >
-            <OfferList text="Rutina 3/4 veces por semana" status="active" />
+            <OfferList text="Rutina 3 veces por semana" status="active" />
             <OfferList text="Guia de calentamiento" status="active" />
             <OfferList text="Guia de ejercicios" status="active" />
             <OfferList text="Consultas primera semana" status="active" />
-            <OfferList text="Guia nutricional" status="inactive" />
-            <OfferList text="Asesoramiento personal" status="inactive" />
+            <OfferList text="Asesoramiento personalizado" status="inactive" />
+            <OfferList text="Guia nutricional personalizada" status="inactive" />
           </PricingBox>
 
           <PricingBox
@@ -96,8 +97,8 @@ const Pricing = () => {
             <OfferList text="Guia de calentamiento" status="active" />
             <OfferList text="Guia de ejercicios" status="active" />
             <OfferList text="Consultas primera semana" status="active" />
-            <OfferList text="Guia nutricional" status="inactive" />
-            <OfferList text="Asesoramiento personal" status="inactive" />
+            <OfferList text="Asesoramiento personalizado" status="inactive" />
+            <OfferList text="Guia nutricional personalizada" status="inactive" />
           </PricingBox>
 
           <PricingBox
@@ -111,8 +112,8 @@ const Pricing = () => {
             <OfferList text="Guia de calentamiento" status="active" />
             <OfferList text="Guia de ejercicios" status="active" />
             <OfferList text="Consultas primeras 2 semanas" status="active" />
-            <OfferList text="Asesoramiento personal" status="active" />
-            <OfferList text="Guia nutricional" status="inactive" />
+            <OfferList text="Asesoramiento personalizado" status="active" />
+            <OfferList text="Guia nutricional personalizada" status="inactive" />
           </PricingBox>
 
           <PricingBox
@@ -126,9 +127,90 @@ const Pricing = () => {
             <OfferList text="Guia de calentamiento" status="active" />
             <OfferList text="Guia de ejercicios" status="active" />
             <OfferList text="Consultas ilimitadas" status="active" />
-            <OfferList text="Asesoramiento personal" status="active" />
-            <OfferList text="Guia nutricional a la medida" status="active" />
+            <OfferList text="Asesoramiento personalizado" status="active" />
+            <OfferList text="Guia nutricional personalizada" status="active" />
           </PricingBox>
+
+        </div>
+
+        <div>
+
+          <h2
+            className="flex w-full justify-center mb-10 text-xl font-bold !leading-tight text-black dark:text-white sm:text-4xl md:text-[30px]">
+            Planes trimestrales
+          </h2>
+
+          <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3 mb-10">
+
+            <PricingBoxBasic price={"11.900"}
+                             packageName={"Principiante"}
+                             discountPrice={"14.700"}
+                             subtitle={`Pago unico por plan trismestral para principiantes. Consultar otros medios de pago.`}>
+
+              <OfferList text="Rutina 3 veces por semana" status="active" />
+              <OfferList text="Guia de calentamiento" status="active" />
+              <OfferList text="Guia de ejercicios" status="active" />
+              <OfferList text="Consultas primera semana" status="active" />
+              <OfferList text="Asesoramiento personalizado" status="inactive" />
+              <OfferList text="Guia nutricional personalizada" status="inactive" />
+            </PricingBoxBasic>
+
+            <PricingBoxBasic price={"24.900"}
+                             packageName="Basico"
+                             discountPrice={"26.700"}
+                             subtitle={`Pago unico por plan trismestral basico. Consultar otros medios de pago.`}>
+
+              <OfferList text="Rutina 4 veces por semana" status="active" />
+              <OfferList text="Guia de calentamiento" status="active" />
+              <OfferList text="Guia de ejercicios" status="active" />
+              <OfferList text="Consultas primera semana" status="active" />
+              <OfferList text="Asesoramiento personalizado" status="inactive" />
+              <OfferList text="Guia nutricional personalizada" status="inactive" />
+            </PricingBoxBasic>
+
+            <PricingBoxBasic price={"39.900"}
+                             packageName="Intermedio"
+                             discountPrice={"44.900"}
+                             subtitle={`Pago unico por plan trismestral intermedio. Consultar otros medios de pago.`}>
+
+              <OfferList text="Rutina 5 veces por semana" status="active" />
+              <OfferList text="Guia de calentamiento" status="active" />
+              <OfferList text="Guia de ejercicios" status="active" />
+              <OfferList text="Consultas primera semana" status="active" />
+              <OfferList text="Asesoramiento personalizado" status="inactive" />
+              <OfferList text="Guia nutricional personalizada" status="inactive" />
+            </PricingBoxBasic>
+
+            <PricingBoxBasic price={"64.900"}
+                             packageName="Completo"
+                             discountPrice={"74.900"}
+                             subtitle={`Pago unico por plan trismestral completo. Consultar otros medios de pago.`}>
+
+              <OfferList text="Rutina totalmente personalizada" status="active" />
+              <OfferList text="Guia de calentamiento" status="active" />
+              <OfferList text="Guia de ejercicios" status="active" />
+              <OfferList text="Consultas ilimitadas" status="active" />
+              <OfferList text="Asesoramiento personalizado" status="active" />
+              <OfferList text="Guia nutricional personalizada" status="active" />
+            </PricingBoxBasic>
+
+            <PricingBoxBasic price={"64.900"}
+                             packageName="Recomposicion corporal"
+                             discountPrice={"74.900"}
+                             subtitle={`Pago unico por plan trismestral completo. Consultar otros medios de pago.`}
+                             bestSeller={true}>
+
+              <OfferList text="Rutina totalmente personalizada" status="active" />
+              <OfferList text="Guia de calentamiento" status="active" />
+              <OfferList text="Guia de ejercicios" status="active" />
+              <OfferList text="Consultas ilimitadas" status="active" />
+              <OfferList text="Asesoramiento personalizado" status="active" />
+              <OfferList text="Guia nutricional personalizada" status="active" />
+            </PricingBoxBasic>
+
+          </div>
+
+
         </div>
       </div>
 
